@@ -1,0 +1,115 @@
+*comment Copyright 2010 by Dan Fabulich.
+*comment 
+*comment Dan Fabulich licenses this file to you under the
+*comment ChoiceScript License, Version 1.0 (the "License"); you may
+*comment not use this file except in compliance with the License. 
+*comment You may obtain a copy of the License at
+*comment 
+*comment  http://www.choiceofgames.com/LICENSE-1.0.txt
+*comment 
+*comment See the License for the specific language governing
+*comment permissions and limitations under the License.
+*comment 
+*comment Unless required by applicable law or agreed to in writing,
+*comment software distributed under the License is distributed on an
+*comment "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+*comment either express or implied.
+
+The receptionist hands you a few papers and says: "Please, before we continue, fill out those forms and then go to the end of the line". This much bureaucracy: you must trully be in Hell.
+You can't blame her for not paying attention to your problems. She probably hears that all of the time, after all. Let's take a look at the paperwork...
+*page_break
+
+The first question is easy enough: are you male or female?
+*choice
+	#Male
+		*set gender "male"
+		*set he "he"
+		*set him "him"
+		*set his "his"
+		*set man "man"
+		*set boy "boy"
+		*set sir "sir"
+		*set mr "Mr."
+		*set nickname "boy scout"
+		*set handsome "handsome"
+		*goto gender_show
+		
+	#Female
+		*set gender "female"
+		*set he "she"
+		*set him "her"
+		*set his "her"
+		*set man "woman"
+		*set boy "girl"
+		*set sir "ma'am"
+		*set mr "Ms."
+		*set nickname "girly"
+		*set handsome "beautiful"
+		*goto gender_show
+		
+*label gender_show
+
+So you are a ${man}, ${sir}? I would never have guessed!
+
+*label name
+	
+"What is your name?"
+
+*if (gender="male")
+	*goto male_name
+
+*if (gender="female")
+	*goto female_name
+	*label male_name
+
+*fake_choice
+	#Paul
+		*set name "Paul"
+	#Peter
+		*set name "Peter"
+	#James
+		*set name "James"
+	#David
+		*set name "David"
+	#Let me input my name
+		*input_text name
+		
+*goto  surname
+
+*label female_name
+
+*fake_Choice
+	#Mary
+		*set name "Mary"
+	#Madeleine
+		*set name "Madeleine"
+	#Esther
+		*set name "Esther"
+	#Delilah
+		*set name "Delilah"
+	#Let me input my own name
+		*input_text name
+
+*goto surname
+
+*label surname
+
+What is your surname?
+
+*fake_choice
+	#Smith
+		*set surname "Smith"
+	#Sanchez
+		*set surname "Sanchez"
+	#Hart
+		*set surname "Hart"
+	#Lee
+		*set surname "Lee"
+	#Let me input my own name
+		*input_text surname
+
+*goto hello_name
+
+*label hello_name
+"${mr} ${name} ${surname}. It has a nice ring to it."
+

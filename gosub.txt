@@ -1,0 +1,15 @@
+*hide_reuse
+*label start
+*choice
+    #One.
+      The loneliest number that you'll ever do.
+      *goto start
+    #Two.
+      Two can be as bad as one.
+      *goto start
+    *allow_reuse #I can't decide!
+      Well, think it over.
+      *goto start
+    #Done.
+      OK!
+      *finish

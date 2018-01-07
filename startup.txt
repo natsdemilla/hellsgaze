@@ -1,0 +1,119 @@
+*comment Copyright 2010 by Dan Fabulich.
+*comment 
+*comment Dan Fabulich licenses this file to you under the
+*comment ChoiceScript License, Version 1.0 (the "License"); you may
+*comment not use this file except in compliance with the License. 
+*comment You may obtain a copy of the License at
+*comment 
+*comment  http://www.choiceofgames.com/LICENSE-1.0.txt
+*comment 
+*comment See the License for the specific language governing
+*comment permissions and limitations under the License.
+*comment 
+*comment Unless required by applicable law or agreed to in writing,
+*comment software distributed under the License is distributed on an
+*comment "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+*comment either express or implied.
+
+*title Hell's Gaze
+*author Natalia Carmo
+*scene_list
+  startup
+  animal
+  variables
+  gosub
+  ending
+  death
+*create satenickname "satey"
+*create renown 0
+*create charm 50
+*create strength 50
+*create agility 50
+*create intelligence 50
+*create willpower 50
+*create wisdom 50
+*create beauty 50
+*create perception 50
+*create tranquility 50
+*create creativity 50
+*create heaven 50
+*create Sate 0
+*create Angie 0
+*create Lily 0
+*create RootBeer 0
+*create Edith 0
+*create Cerberus 0
+*create Mercurio 0
+*create Dan 0
+*create Michael 0
+*create Gabriel 0
+*create Hael 0
+*create gender "male"
+*create he "he"
+*create him "him"
+*create his "his"
+*create man "man"
+*create sir "sir"
+*create mr "Mr."
+*create nickname "boy scout"
+*create boy "boy"
+
+*create name "name"
+*create surname "surname"
+*create fullname "fullname"
+
+*create orientation "yes"
+
+*create  valentine "Valentine"
+*create  boyfriend "boyfriend"
+*create  husband "husband"
+*create  val_he "he"
+*create  val_his "his"
+*create  handsome "handsome"
+*create  val_man "man"
+*create rel_val 50
+
+*create profession "profession"  
+
+Welcome to Hell's Gaze!
+
+Copyright 2010 by Dan Fabulich.
+
+Dan Fabulich licenses this file to you under the
+ChoiceScript License, Version 1.0 (the "License"); you may
+not use this file except in compliance with the License. 
+You may obtain a copy of the License at
+
+*link http://www.choiceofgames.com/LICENSE-1.0.txt
+
+See the License for the specific language governing
+permissions and limitations under the License.
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied.
+
+*page_break
+
+You wake up in the middle of the dirtiest hospital you have ever seen, surrounded by wounded and crazy-looking strangers and they all wait in a line that you have just skipped.
+This is a terrible start, you think to yourself, ready to get out of the way, when someone speaks to you: "Hello, welcome to Hell. My name's Angie, how may I help you?". 
+Did she say "Hell"? I'm sure you misunderstood, why don't you ask again?
+*line_break
+"What?"
+*line_break
+Very smooth, she will probably be impressed. The girl smiles sweetly at you and repeats: "Welcome to Hell."
+
+*page_break
+She waits for a reaction, anything that proves you're not brain dead.
+*fake_choice
+  #I can't possibly be in Hell!
+    You guarantee Angie that she must be mistaken, to what she responds with a sigh: "I'm sorry to disappoint you, but God makes no mistakes. If you're here, you should be here."
+    *set heaven +1
+  #...What?
+    You can't seem to muster anything cohesively, so you babble another 'what', that earns you Angie's pity. "Are you alright?"
+  #I knew I'd come here eventually, but...
+    You don't know how or when it happened, but there is no doubt you're in the right place. You shrug and tell her that.
+    *set heaven -1
+
+This girl is the only beautiful thing around here. Everything else is nasty: the walls are covered in blood, mold and other things that don't feel safe to identify. It is so hot in here it makes you shiver as if it was cold. 

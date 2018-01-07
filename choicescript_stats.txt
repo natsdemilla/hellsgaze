@@ -1,0 +1,37 @@
+A little taste of your soul:
+*stat_chart
+	text Name
+	text Surname
+	text Gender
+	text Renown
+*line_break
+*stat_chart
+	percent Charm
+	percent Strength
+	percent Agility
+	percent Intelligence
+	percent Willpower
+	percent Wisdom
+	percent Perception
+	percent Beauty
+	percent Tranquility
+	percent Creativity
+	opposed_pair Heaven
+		Hell
+*line_break
+
+*page_break
+Your bonds with other souls:
+*stat_chart
+	percent Angie
+	percent Sate
+	percent Edith
+	percent Lily
+	percent Dan Daniel
+	percent RootBeer Root Beer
+	percent Mercurio
+	percent Cerberus
+	percent Michael
+	percent Gabriel
+	percent Hael
+*line_break

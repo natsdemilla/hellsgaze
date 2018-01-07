@@ -1,0 +1,724 @@
+*comment Copyright 2010 by Dan Fabulich.
+*comment 
+*comment Dan Fabulich licenses this file to you under the
+*comment ChoiceScript License, Version 1.0 (the "License"); you may
+*comment not use this file except in compliance with the License. 
+*comment You may obtain a copy of the License at
+*comment 
+*comment  http://www.choiceofgames.com/LICENSE-1.0.txt
+*comment 
+*comment See the License for the specific language governing
+*comment permissions and limitations under the License.
+*comment 
+*comment Unless required by applicable law or agreed to in writing,
+*comment software distributed under the License is distributed on an
+*comment "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+*comment either express or implied.
+
+Oh, how nice! A psychological profile. Looks quite professional, don't you think? Let's see...
+*page_break
+People often call you stubborn.
+*fake_choice
+	#Strongly agree
+		Interesting. That makes you someone that doesn't follow the crowd blindly, but also someone that almost never listens to others. 
+		*set willpower +5
+		*set wisdom -10
+		*set creativity +5
+	#Agree
+		Hey, everybody is a little stubborn from time to time. That's not necessarily a bad thing.
+		*set willpower +5
+		*set creativity -5
+		*set wisdom +5
+		*set charm - 5
+	#Disagree
+		Maybe you're more of a sheep, huh? At least you listen to other people's advice most of the time!
+		*set willpower -5
+		*set wisdom +10
+		*set creativity -2
+	#Strongly disagree
+		You're definitely a sheep. That means you always listen to other people's advice, but maybe you also blindly follow the crowd. 
+		*set willpower -10
+		*set charm +5
+		*set wisdom +5
+		*set creativity -5
+*page_break
+You are well-educated and has a sharp mind for problem solving.
+*fake_choice
+	#Strongly agree
+		Good for you! Unfortunately, being bright also means worrying more about things the average ${boy} doesn't think about.
+		*set intelligence +10
+		*set tranquility -10
+	#Agree
+		Good for you! You were probably smart enough to get good grades, but not intelligent enough to be called a "nerd". 
+		*set intelligence +5
+		*set charm +2
+		*set wisdom +3
+		*set tranquility -10
+	#Disagree
+		You were never the sharpest tool in the shed, but it also meant being more carefree than your peers.
+		*set intelligence -5
+		*set tranquility +5
+	#Strongly disagree
+		You know the saying: ignorance is bliss. Books make you worry too much about the world, am I right?
+		*set intelligence -10
+		*set tranquility +10
+
+*page_break
+You like to find new solutions to old problems.
+*fake_choice
+	#Strongly agree
+		You are considered highly innovative, but that means that sometimes you will be ignoring solutions that are already there. 
+		*set creativity +10
+		*set perception -5
+		*set wisdom -2
+		*set charm -3
+	#Agree
+		You have your moments, but I take it being "innovative" is not your greatest strength. 
+		*set creativity +5
+		*set wisdom +3
+		*set perception -2
+	#Disagree
+		You prefer to not waste time with new solutions if the old ones work just fine.
+		*set creativity -5
+		*set tranquility -5
+		*set wisdom +5
+		*set perception +5
+	#Strongly disagree
+		Innovating was never your forte, I suppose. But that's okay, if your head's not in the clouds it means a strong grip of reality.
+		*set creativity -10
+		*set perception +10
+*page_break
+You are very persuasive and people usually like you.
+*fake_choice
+	#Strongly agree
+		You certainly have a... je ne sais quois about you that is very endearing. 
+		Unfortunately, getting what you want is so easy that it makes you a little careless.
+		*set charm +10
+		*set perception -10
+	#Agree
+		You're charming enough to be a pleasant company. 
+		*set charm +5
+	#Disagree
+		You're not exactly the life of the party, but that makes you aware of your surroundings.
+		*set charm -5
+		*set perception +5
+	#Strongly disagree
+		Because you often fade in the background, you notice things regular people wouldn't. These are the perks of being a wallflower, huh?
+		*set perception +10
+		*set charm -10
+*page_break
+People often seek you for advice.
+*fake_choice
+	#Strongly agree
+		You're wise beyond your years, an old soul. That makes you more conservative, too.
+		*set wisdom +10
+		*set creativity -10
+	#Agree
+		You're sensible enough not to get in trouble, that's all.
+		*set wisdom +5
+		*set tranquility -5
+	#Disagree
+		You're young, and being young means you're allowed to make mistakes. Right?
+		*set wisdom -5
+		*set tranquility +5
+	#Strongly disagree
+		You're wild and powerful as someone of your age ought to be.
+		*set willpower +10
+		*set wisdom -10
+*page_break
+Oh, now comes the fun part: physical evaluation! According to these exams you would be considered...
+*fake_choice
+	#Strong
+		Powerful muscles and heavy built!
+		*set strength +20
+		*set agility -20
+	#Athletic
+		Powerful yet fast!
+		*set strength +10
+		*set agility +10
+	#Average
+		Nothing special, huh?
+		*set strength +5
+		*set agility +5
+		*set perception +5
+	#Thin
+		Agile and petite!
+		*set strength -20
+		*set agility +20
+*page_break
+Are you considered attractive by your peers?
+*fake_choice
+	#What kind of question is that?
+		Ooh... feisty!
+		*set charm -10
+		*set willpower +10
+		*set perception +10
+	#Highly attractive.
+		Be careful, privilege can blind us.
+		*set beauty +20
+		*set perception -15
+		*set wisdom -10
+		*set charm +5
+	#People say I'm cute!
+		Indeed!
+		*set beauty +10
+		*set charm +15
+		*set willpower -10
+	#I'm average, I guess.
+		And that's fine.
+		*set perception +10
+		*set wisdom +10
+	#I think I'm below average...
+		Don't be so hard on yourself!
+		*set beauty -10
+		*set perception +10
+		*set intelligence +5
+		*set wisdom +5
+	#People say I'm ugly, but my mother thinks I'm ${handsome}!
+		At least you can make us laugh!
+		*set beauty -20
+		*set charm +10
+		*set wisdom +10
+*page_break
+What object do you want to take with you to the afterlife? What does it represent to you?
+*line_break
+This seems like an open-ended question...
+*fake_choice
+	#A photograph.
+		Of what?
+		*fake_choice
+			#Of my family, because I'll miss them.
+				*set heaven +5
+				*set wisdom +10
+			#Of myself, so I'll remember who I really am.
+				*set heaven -5
+				*set willpower +10
+			#Of my patients, so I remember the good I did.
+				*set heaven +10
+				*set willpower +5
+				*set intelligence +10
+				*set profession "doctor"
+	#A mirror.
+		Why?
+		*fake_choice
+			#Because even in Hell I want to take care of myself.
+				*set heaven -10
+				*set beauty +10
+			#Because I can watch people without them noticing me. 
+				*set heaven -5
+				*set perception +10
+			#Because I don't want to lose sight of who I really am.
+				*set heaven -5
+				*set wisdom +10
+	#A knife.
+		Why?
+		*fake_choice
+			#My sensei gave it to me because the strong should protect the weak.
+				*set profession "martial artist"
+				*set agility +10
+				*set strength +5
+				*set heaven +10
+			#My sensei gave it to me because the strong should take over the weak.
+				*set profession "martial artist"
+				*set agility +10
+				*set strength +5
+				*set heaven -10
+			#My sensei gave it to me so I could take care of myself.
+				*set perception +10
+				*set wisdom +10
+				*set heaven -5
+				*set profession "martial artist"
+	
+	#A pen.
+		Why?
+		*fake_choice
+			#I was a writer, and it reminds me of how much I loved my job.
+				*set profession "writer"
+				*set creativity +10
+				*set intelligence +5
+			#I was a teacher, and it reminds me of how much I hated my job.
+				*set heaven -10
+				*set profession "teacher"
+				*set charm +5
+				*set intelligence +10
+			#I was a teacher, and it reminds me of how much I loved my job.
+				*set profession "teacher"
+				*set heaven +10
+				*set charm +10
+				*set intelligence +5
+	#I don't need anything.
+		Why?
+		*fake_choice
+			#Because all I need is myself.
+				*set wisdom +10
+				*set willpower +10
+				*set heaven -10
+			#Because there's no use for such things in Hell.
+				*set wisdom +20
+				*set heaven +10
+*page_break
+Now the most important question: how did you die?
+*page_break
+...
+*page_break
+Hello?
+*fake_choice
+	#Sorry, I had a strong headache.
+	#Ugh, mt head hurts. 
+	#Oh, yeah, sorry. Headache. 
+I hope you're better now.
+*fake_choice
+	#Not much.
+		Too bad...
+	#A little bit.
+		That's good.
+	#I am, thanks.
+		Oh, great!
+	#I still feel terrible.
+		Oh, you poor thing!
+		
+I'm sure it was nothing, now back to the matter at hand: how did you die?
+*fake_choice
+	#I can't remember...
+	#I can't remember.
+	#I can't remember!
+Well, that may be normal considering that death is such a traumatic event. It may come back to you in a while. Let's leave a blank space in here. 
+Time to wait for your turn...
+*page_break
+After a small eternity - time means nothing when you're dead - you get face to face with Angie again. She accepts your form and starts to verify every detail, until the last line.
+*line_break
+"There's nothing here" the receptionist comments. 
+*line_break
+You explain what happened and the girl frowns. Her face wasn't made for this kind of expression, it feels like watching a beautiful painting get wrinkled and stained. Her blue eyes shine through a streak of jet black hair and for the first time she looks dangerous.
+No, not dangerous: scary. wearing a gray and white uniform, the woman appears to be an angel of some sort, then that face contorts in a somber thing that doesn't suit her. There is electricity in the air.
+*line_break
+"This makes no sense. You should remember. Everybody does."
+*line_break
+Usually in stories about heroes waking up in the middle of nowhere it is pretty normal to experience amnesia, but this is real life, I suppose. Why don't you respond?
+*fake_choice
+	#"Are you telling me I am the first one that doesn't recall what happened?"
+		"Yes, that is exactly what I'm telling you." she goes back to looking nice. "You see, there is no point in being punished if you don't know why you're here. That's why we make sure every sinner remember how they died and what they did." 
+	#"Is there a problem, ma'am?"
+		"Yes, there is." She goes back to looking nice. "You see, there is no point in being punished if you don't know why you're here. That's why we make sure every sinner remember how they died and what they did." 
+	#"This is bullshit. I'm sure it's some kind of prank!"
+		"Well, I'm sorry you think so, ${sir}, but this is real. You're already in Hell, so I suggest you behave or things can get even uglier."
+		That was the most terrifying thing anybody said to you. Not because of the words: because of the tone she used. As if the girl was about to murder you. We're off to a great start.
+		*line_break
+		"You see, there is no point in being punished if you don't know why you're here. That's why we make sure every sinner remember how they died and what they did." 
+		*line_break
+		*set angie -5
+*page_break
+Angie checks a few files on the computer and turns to you: "You said your name was ${name} ${surname}, am I correct?"
+You nod. "This is worse than I thought..." You gulp, trying to imagine anything worse than being lost in Hell. 
+*page_break
+"..."There's nothing about you in here."
+*line_break
+I thought God made no mistakes. Could it be you're his only error? Oh, did I offend you? I hope not, it was just my way of saying he didn't mean to create you in the first place. Not helping? Ok, I'll shut up now. 
+*line_break
+...
+*line_break
+I can't shut up completely, or you would have no idea of what is happening. I'll go on then. 
+The receptionist ushers you toward an endless corridor that stinks of death. The walls are red and full of iron doors, that even being as thick as a human body, couldn't tame the screams that came from the other side. "Each one of these leads to a different punishment." You wonder what will be yours, and Angie almost reads your thoughts when she says "We cannot send you to any before knowing which crimes you committed." before realizing this means you're stuck here anyhow, you let out a sigh of relief. "That's why" the girl continues "I'm taking you to see The Director."
+*line_break
+You're thankful to skip the immense line that starts in front of a wooden-sculpted door, which reads "management" in bold, complicated letters. Everybody complains when they see what you're doing, some of them trying to get to you. One fat man in particular pounces, knife in hand, trying to hit your throat. What do you do?
+
+*fake_choice
+	#Scream.
+		You can't think of anything better than to scream in sheer horror. Your attacker sinks the blade deep in your throat and you feel its sharpness each time you try to breath. He stabs you again and again, until the only thing you feel is the warmth of your own blood. 
+		*line_break
+		There's a problem, though: you're already dead. You wake up a few hours later with Angie by your side. If you needed any proof that this is real, that was enough evidence. Everything hurts, but you're... "alive". The receptionist helps you to your feet and says "that was one of the lost ones. Probably a suicidal, to be mad like that. They're the worst in here, you know?" You wonder why she didn't help you out, to what she senses the question and answer promptly: "There was no reason to intervene. You can't die in here." Somehow that makes you feel safer. 
+		*set renown -1
+	#Do nothing.
+		You can't think of anything better than to stare in sheer horror. Your attacker sinks the blade deep in your throat and you feel its sharpness each time you try to breath. He stabs you again and again, until the only thing you feel is the warmth of your own blood. 
+		*line_break
+		There's a problem, though: you're already dead. You wake up a few hours later with Angie by your side. If you needed any proof that this is real, that was enough evidence. Everything hurts, but you're... "alive". The receptionist helps you to your feet and says "that was one of the lost ones. Probably a suicidal, to be mad like that. They're the worst in here, you know?" You wonder why she didn't help you out, to what she senses the question and answer promptly: "There was no reason to intervene. You can't die in here." Somehow that makes you feel safer. 
+		*set renown -1
+	#Get behind Angie. 
+		You hide behind the receptionist, hoping to be protected, and to some extent you are. The woman launches in an attack that lasts no more than a few seconds, but keeps the crazy man at bay. Her shadow shows wings that her body don't, and her eyes seem to glow in the dark. In a few more instants the madman vanishes in thin air and you both breath heavily. "You should be more careful next time." You open your mouth to argue that it was not your fault, but she's already walking to the door again. 
+		*set heaven -3
+		*set angie -10
+	#Step in front of Angie.
+		You step in front of her, in an irrational act of selflesness. She probably could handle a fight better than you can, although that doesn't stop your instincts from taking most of the blows. The blade sinks in your nape with a sick noise that will echo in your mind for days to come, then a sharp and white pain sends shock waves through your spine. You realize suddenly that you can't walk anymore, nor move. The advantage of being dead is that those things don't last long, so you sigh, relieved when you can feel your limbs again. Angie smiles at you, still shaking: "I'll never get used to it. Thanks for stepping in, even though we can't really die."
+		*set heaven +1
+		*set angie +20
+		*set renown +1
+	*selectable_if (profession = "martial artist") #Use your knife.
+		You nimbly draw your combat knife from your belt and slashes one of his tendons. The noise is of rubber being stretched then cut off. It sickens you, but it works perfectly as the madman runs away yelling from the pain and numbness. You're glad you were able to avoid killing him, even though he's already dead anyway. "Quick thinking." she compliments, brushing her hair from her eyes. "You don't have to worry much though, you can't be killed like that in Hell." 
+		*set heaven +5
+		*set angie +10
+		*set renown +1
+	*selectable_if (profession = "writer") #Use your pen as a weapon (writer).
+		Without thinking, you sink your pen in the man's throat, deep enough to stop him from breathing. As your attacker agonizes, you force yourself to stay there and wait until he suffocates. Then you stand up, clothes sprinkled with blood, messy hair and wild, cold eyes. The corruption is there, from killing him, even if he's already dead. "Don't worry, dear." Angie says "He's coming back soon, it's just a ghost, like both of us."
+		*set heaven -10
+		*set renown +1
+	*selectable_if (profession = "teacher") #Use your pen as a weapon (teacher).
+		Without thinking, you sink your pen in the man's throat, deep enough to stop him from breathing. As your attacker agonizes, you force yourself to stay there and wait until he suffocates. Then you stand up, clothes stained from blood and ink, not knowing which is which. The corruption is there, from killing him, even if he's already dead. "Don't worry, dear." Angie says "He's coming back soon, it's just a ghost, like both of us."
+		*set heaven -10
+		*set renown +1
+	#Fight the man.
+		*if strength >65
+			You manage to overpower him with an impressive show of strength. In the end you throw him toward a wall and he runs away scared. Angie seems impressed: "Good job! You handled the situation pretty well!" You smile. 
+			*set heaven +5
+			*set angie +10
+			*set renown +1
+			*goto continue
+		*elseif agility >69
+			You manage to dodge his blows until he's too tired to continue. You then apply a well-placed punch that catches him by surprise and steals his breath away. The madman gives up on you and walks away, cursing everything and everyone as if what he did was right and, well, common. You're in Hell, so maybe it is normal around here after all. "You're so fast! I've never seen someone moving with such grace!" Angie comments, then blushes realizing it may be ill-interpreted. 
+			*set heaven +5
+			*set angie +12
+			*set renown +1
+			*goto continue
+		*else
+			He's much stronger and faster than you are, and there's not much you can do against that. You end up being stabbed over and over until you pass out, only to wake up in the same place, cured and embarrassed. Angie shakes her head as if in pity and you stand up without saying a single word.
+			*set angie - 10
+			*set renown -1
+			*goto continue
+*label continue
+		
+After this interruption, Angie knocks on the wooden door and a male voice yells for you both to come in. 
+*page_break
+You find yourself in what looks like an office. Every furniture from the table to the huge shelf is made of solid mahogany. There are papers and books everywhere, mixed up with no specific criteria. Some of them even function as nightstands and paper weight. The floor is not exactly dirty, but if it was you would never be sure, since most of it was covered with trinkets of all kinds. There is a white mug with a "#1 boss" print, full of pitch-black coffee. You notice that most books are of a political nature, and those who are not are all classics: Dostoevsky, Nietzsche, Elizabeth Barrett Browning, Ernest Hemingway and, to your surprise, Tolkien. The rug is crimson, full of rich details in gold. And the cherry on top: a young man of about 16 or 17, dressed in military clothes and sitting at the armchair with his feet on the writing desk. His hair and eyes are of a deep hazelnut color, and he keeps a goatee with an incredibly pointy mustache. On his head there is a dark red beret. He stands up and extends a hand to you:
+*line_break 
+"Name's Satan, nice to meet 'ya kid." 
+*line_break
+You shiver. Everything in that sentence is wrong. First, because he's the Devil. Second, and perhaps more disconcerting, he's calling you a kid when you appear to be older than him. You're not sure how to answer, but you sure as Hell don't feel comfortable calling the fallen angel by his real name. You notice that Satan is getting impatient, so you muster up all your courage and answer:
+*fake_choice
+	#"${name} ${surname}, nice to meet you sir."
+		*if willpower >69
+			You meet his eyes and shake his hand firmly. It's obvious it earns the Devil's respect. "Oh, I like this ${boy} already."
+			*set sate +10
+			*set renown +1
+		*if willpower <69
+			The words come out with less confidence than you expected and you can see he's not impressed. He shakes your hand nonetheless, trying to ignore the fact that his visitor is almost peeing in ${his} pants. 
+			*set renown -1
+	#"${name}." 
+		You think that the less you say, lesser are the chances of saying the wrong thing. You go for his hand, since it's standing there, and he smile politely at your obvious apprehension. "It's alright. I don't bite, unless I'm in bed with them." That sends a chill through your arms. 
+	#"S-satan?"
+		Yeah, are you deaf? Satan, Prince of the Dark and all that bullshit. The Devil is annoyed by your inability to keep cool. 
+		*set sate - 10
+"As much as I love wasting my time, I think we should begin. Take a sit kid." then he turns to Angie "Why did you bring ${him} personally? Is there a problem?"
+*fake_choice
+	#Let Angie explain.
+		She responds uneasily: "$!{he}'s not in the files, sir." She continues "Actually, ${he} can't even remember how he died or what he did wrong."
+	#Explain it yourself.
+		You cut in: "I can't recall how I died, nor what I did wrong and I'm not in the files."
+Satan squint his eyes: "What did you say? Are you two certain of it?" you both nod, as you try ignoring how fast your dead heart is beating right now. "Angie, thank you for your service. You may leave us alone now." The receptionist hesitates, but goes away. Silence makes the air heavy and charged with a weird electricity, the same you noticed in Angie's eyes. The young man gets up and walks around you, hands behind his back, eyes never leaving you. "Now, kid, there are a few advantages in being the Devil. I can actually read people's souls in order to determine their sins and properly judge them. Not only that, but I can sense if you're lying to me, so don't even try." You hold yourself, trembling. "Tell me, ${name}, would you lie to me?" You shake your head. Even if you wanted to, you would never be stupid enough to admit it. Good thing you don't want to. "Good. We can begin then." 
+His gaze pours into you like a flood, fast and devastating. After a few seconds he leaves, sweating and coughing from the strange effort. 
+"Interesting." 
+*page_break
+*if heaven >50
+	"I thought so. Your soul is relatively pure, so you shouldn't be here, but there's something else, too."
+*if heaven <50
+	"I thought so. Your soul is as dirty as all my sinners, but there's something else, too."
+You hold your breath and wait for him to finish. Satan looked much taller sitting down, but you also notice just how muscular he is under the heavy clothes. "You're still attached to your mortal body."
+*line_break
+What?
+*line_break
+"Does it mean I'm not dead?" He smirks "No, you're as dead as any ghost here in Hell, kid. But your body is alive, too. It means someone is still using it, and if it's not you..." "It's an impostor" you complete, feeling a sudden need to throw up. Just imagining some random soul occupying your body, talking to friends and family and pretending to be you... You have so many questions! Satan notices and signal for you to ask away.
+*hide_reuse
+*label start
+*fake_choice
+	#Has it ever happened before?
+		"No, it'd be a first. Dad doesn't make mistakes." He notices you're frowning and quickly explains "Or so we thought. This is as confusing for me as it is for you, but this is the only explanation I see. If you were still attached in your body because of a coma or something, you'd be fully alive, and if you had unfinished business on Earth like most ghosts do we'd send our staff to solve the matter. But this? I feel your body walking around the living. I hear your beating heart, feel the heat you emanate, and still, you're here. The only think I can think of is an impostor."
+		*goto start
+	#Why would anyone do that?
+		"Why would anyone kill, ${boy}? Why would people rape, rob and hurt others? Why did your first crush break your heart? There are as many explanations and reasons as there are stars in the Universe. Human beings are a tricky sort to understand."
+		*goto start
+	#Can I still recover my body?
+		"Probably, although I have no idea how."
+		*goto start
+	*allow_reuse #I have more to ask!
+		Well, go ahead then.
+		*goto start
+	#I'm done asking questions.
+		And you have only one thing to say...
+	  
+... You want your body back.
+*page_break
+"I'll help you, since Father would never let me hear the end of it, if he found out about you. You'll stay here as my guest, but with a few restrictions. First, you may never leave your room without someone from my staff present, or me, if I'm available. Second, you must not tell the truth to anyone: it's something between you, me and Angie. Are we clear?" You're already getting used to the fact that you're speaking with the Devil, so you don't feel that intimidated this time. 
+*fake_choice
+	#"I'm a glorified prisoner then."
+		"Pretty much, yeah." He grins. 
+		*set willpower +5
+	#"Do I have a choice?"
+		"Yes, you do. You can rot in Hell for all eternity. Stop being so whiny." 
+		*set sate -10
+	#"Why are you being so nice?"
+		He throws his head back and laughs "Oh, you think this is me being nice? That's cute. Nah, I'm being practical, that's all."
+		*set sate +10
+	#"Yes, thanks."
+		"No need to thank me. I'm doing this for myself, believe me." You do. He looks away, visibly amused by your response.
+		*set sate +15
+	#"Yes, sir."
+		"I'm not calling you ${Mr} ${surname}, am I? No need to go all formal on me anymore, kid."
+		*set sate +5
+You look away. "Call me 'Sate' from now on. As much as I love the attention, 'Satan' makes me sound as a villain from a bad novel." The young man sighs and calls someone on the phone, someone named Lily. Not long after there's a knock on the door and the tallest woman you have ever seen enters. She's slim and all dressed in gold, with a beautiful hairstyle that makes her look like an eighties' diva. Her skin is like melted chocolate, with honey eyes that seem to never smile. "You called, mr. Satan?" Lily says, standing by your side like a soldier waiting further orders. 
+*line_break
+"Yes, this is ${name}, my new guest. You are to keep an eye on ${him}. $!{he} may never leave the bedroom alone." The woman grabs you by the arm, her long nails pressing your skin. "Yes, sir." He tells you both to go and reminds his guard to pick a room near his own. 
+*line_break
+After almost two hours of walking, you arrive at your new bedroom. It's actually a fine place: is clean and ventilated, with a gigantic bed full of soft pillows. It's also well decorated. Lily curtsies: "I'll take my leave now ${sir}. You may use your private bathroom if you wish to shower and change clothes. I'll be outside guarding your door." You thank her and take a look at the old rags hanging dirty on your body. Washing up sounds nice. After following her suggestion you open your wardrobe to find all sorts of garments of every possible period of History. You choose to wear:
+*if gender = "male"
+	*fake_choice
+		#Something of Victorian style.
+			You wear a brown waistcoat and pants with high waistbands that fit tightly at the top.
+			*set charm +10
+			*set willpower -10
+		#Something futuristic.
+			You wear a leather overcoat and a black shirt. Cool and sleek!
+			*set agility +5
+			*set willpower+5
+			*set charm -10
+		#Something of military style.
+			You wear an army uniform from the fifties and feel unstoppable. 
+			*set willpower +10
+			*set agility + 5
+			*set sate +5
+			*set tranquility -5
+			*set beauty -5
+			*set charm +5
+		#Something from the sixties. 
+			You wear sneakers and a leather jacket. There are even sunglasses!
+			*set charm +10
+			*set angie +5
+			*set perception -10
+		#Something from the twenties. 
+			You wear a striped suit and a fedora. Smooth!
+			*set angie +5
+			*set charm +10
+			*set agility -10
+		#Something from current fashion - but fancy. 
+			you wear a well-tailored black suit.
+			*set charm +10
+			*set agility -10
+		#Something casual.
+			You wear jeans and a basic t-shirt. 
+			*set charm -10
+			*set perception +10
+*if gender = "female" 
+	*fake_choice
+		#Something of Victorian style.
+			You wear a tight corset - not as tight as girls back then, but tight enough to compliment your waist. The skirt is shorter than the real thing, although not less difficult to move with. It's quite the attire!
+			*set beauty +5
+			*set charm +5
+			*set agility -10
+		#Something futuristic.
+			You wear a tight rubber overall. It's black and comfortable, with leather reinforcements. 
+			*set willpower +5
+			*set charm -5
+		#Something of military style.
+			You wear camouflage trousers and jacket, with a black tight top underneath. It's empowering, really. 
+			*set sate +5
+			*set willpower +5
+			*set agility +5
+			*set tranquility -5
+		#Something from the sixties.
+			You wear a yellow shift dress and style your hair accordingly. It's cute!
+			*set angie +5
+			*set charm +10
+			*set agility -5
+		#Something from the twenties. 
+			You wear a shapeless dress that feels liberating. It's full of fringes and glittery details. 
+			*set charm +5
+			*set beauty -5
+		#Something from current fashion - but fancy. 
+			You wear a golden silk dress that shows all your curves. It's stunning!
+			*set lily +5
+			*set beauty +15
+			*set agility -15
+		#Something casual.
+			You wear jeans and a t-shirt, with cute sneakers. 
+			*set charm -5
+			*set perception +5
+			*set heaven +5
+
+You feel troubled there, sitting on your bed doing nothing, so you decide to go out a bit to explore. Why?
+*fake_choice
+	#Because I'm bored and anything will be better than this.
+		You have to occupy your mind with something at all times, huh?
+	#Because I can't stand waiting for anything or anyone!
+		Yeah, me neither! Let's go.
+	#Because I think it's important to know what I'm dealing with.
+		Smart. When things get dangerous you may even last five seconds!
+	#Because I'm so curious, I'm itching to see what the rest of this place's like!
+		Me too! Do they have, like, actual lava?
+There is only one tiny problem ahead: Sate gave you specific orders not to leave your room alone, so you'll have to convince Lily to go with you. Or, you know, we could aways sneak out. I'm sure there's a way to do that, too. So, what's it going to be?
+*choice
+	#I'll try and convince Lily to go with me.
+		Prepare that silver tongue of yours.
+		*goto convincelily
+	#I'll sneak out of the room. 
+		I hope you've got a plan.
+		*goto escaperoom
+
+*label convincelily
+Okay, so you decided you'll convince the Devil's trusted guard to go on a little adventure with you. How exactly do you plan on achieving that? There are a few options: being charming and persuasive is the most obvious path, but you may decide you're not that smooth. You could try to intimidate her, which would be almost impossible, although it may earn you her respect. You could try seducing her, if you don't mind being a bit sly, or could try to reason your way out. Either way, you better choose a sound course of action or you'll risk angering a most deadly being. 
+*fake_choice
+	#Persuade her.
+		You open the door and smile at Lily, who does not smile back. 
+			*if charm >69
+				"I was thinking... you look like someone capable of protecting me." She laughs "Of course I am, this is exactly the order I received."
+				"So, could you, you know, protect me while we walk? I would enjoy taking a look around and if you came along to keep an eye on me you could be the one to show me around. So I would not go where I'm not intended to. 
+				The woman stops and thinks for a second, then grins: "It's definitely better than staying here doing nothing. I guess I could show you a few places." You beam "Thank you!". 
+				*set lily +10
+				*set heaven +5
+				*set renown +1
+				*temp var "lilygoes"
+				*goto exploring
+			*else
+				"You look so strong, Lily! Maybe you can protect me." She sneers "Are you saying you doubted my strength?" You start to mutter apologies and explanations, but it's too late. She shoves you inside the bedroom again and locks the door. It takes some time and a little begging, but the woman finally agree to letting you out and showing you around. 
+				*set lily -10
+				*set renown -1
+				*temp var "lilygoes"
+				*goto exploring
+	#Reason with her.
+		You open the door slightly and asks Lily to come in for a second. When she does, both of you sit on the bed and you start talking:
+			*if intelligence >69
+				"I remember Sate saying I couldn't go out alone, but that means I can leave with you, right?"
+				The guard thinks for a second: "I suppose." You continue: "Can we take a walk then? You could show me a few safe places..." She laughs "You're a smart ${boy}, I'll give you that. Even though there's no such thing as "safe" in Hell, I guess I could show you around a bit."
+				*set lily +10
+				*set renown +1
+				*temp var "lilygoes"
+				*goto exploring
+			*else 
+				"I believe Sate told you you're my guard, right?" She frowns "I suppose so." "Then" you keep going "you've got to follow my orders." Lily rolls on the ground in a fit of laughter. When the woman calms down, she turns to you: "No, I'm not your servant. I'm here to ensure you don't do anything stupid, that's all. It takes some time and a little begging, but the woman finally agree to letting you out and showing you around. 
+				*set lily -10
+				*set renown -1
+				*temp var "lilygoes"
+				*goto exploring
+	#Intimidate her.
+		You go over to her and attempts to force her against the wall. 
+			*if strength >69
+				It's surprisingly easy, so you press your fingers around her neck and say "Listen: I'm about to go out and you're about to pretend you saw nothing. You can come with me if you want to keep me from trouble, but if you try to stop me from going out, I'll crush you." You press her throat a little tighter. "Yes, ${sir}" she gasps. "Good."
+				*set lily +10
+				*set heaven -5
+				*set renown +1
+				*temp var "lilygoes"
+				*goto exploring
+			*else
+				It's more difficult than you imagine, as she grabs your throat with inhuman strength and pins you to the wall. "Never try that again, or you'd wish there was no afterlife." You nod, scared and mortified. It takes some time and a little begging, but the woman finally agree to letting you out and showing you around. 
+				*set lily -10
+				*set renown -1
+				*temp var "lilygoes"
+				*goto exploring
+	#Seduce her. 
+		You go over to her and wink slyly. 
+			*if beauty >69
+				You bat your eyelashes and turn in your best angle. There's no need to much more than that, being as attractive as you are. Lily blinks, stunned. "I'm so, so bored! You know, you could show me around... I'd be forever in your debt." She blushes slightly: "Oh? I'd be glad to charge you afterwards." Success! 
+				*set lily +15
+				*set renown +1
+				*temp var "flirtyflirt"
+				*temp var "lilygoes"
+				*goto exploring
+			*elseif charm >69
+				You grin and trace a finger up her arm. It send shivers that she couldn't conceal and you get advantage of that to whisper in her ear: "I'm so, so bored! You know, you could show me around... I'd be forever in your debt." She blushes slightly: "Oh? I'd be glad to charge you afterwards." Success!
+				*set lily +15
+				*set renown +1
+				*temp var "flirtyflirt"
+				*temp var "lilygoes"
+				*goto exploring
+			*elseif heaven <50
+				You're not ashamed of talking - nor acting - dirty. You open up your clothes a little bit to reveal more skin, then mess up your hair and go directly to her neck: "I'm so, so bored! You know, you could show me around... I'd be forever in your debt." She blushes slightly: "Oh? I'd be glad to charge you afterwards." Success!
+				*set lily +15
+				*set renown +1
+				*temp var "flirtyflirt"
+				*temp var "lilygoes"
+				*goto exploring
+			*else
+				You pout childishly "I'm so, so bored! You know, you could show me around... I'd be forever in your debt." Lily raises an eyebrow before coming closer and locking you against the wall: "I have... other means of solving your boredom." Your heart stops. You weren't prepared for such fiery reaction.
+					*fake_choice
+						#Back down
+							This was all a big mistake. You babble that there was a misunderstanding and back down, flustered. Lily smirks: "I figured you were a wimp. A word of advice, ${boy}: if you try to seduce someone, you better be prepared to go all in." When you recover from the mortifying experience, you beg her to go with you and let you explore Hell a bit, to which she half-heartedly agrees.
+							*set lily -20
+							*renown -1
+							*temp var "lilygoes"
+							*goto exploring
+							
+						#Too late to back down now.
+							You lock your lips with hers and she kisses you passionately. It's probably the most pleasurable experience of your whole life. She knows all too well how to move her hands, how to stare into your soul. The guard pulls you inside the bedroom and locks the door. What goes on next is intense and lasts for many hours. When you're finished - and after a well deserved nap - you ask her to show you around, to which she gladly agrees. It seems you were able to keep her satisfied!
+							*set lily +20
+							*renown +1
+							*temp var "laidthatsuccubus"
+							*temp var "lilygoes"
+							*goto exploring
+
+
+
+
+
+
+
+
+
+
+
+
+
+*label escaperoom
+Fine, now what? how exactly are you going to achieve that? You take a look around and see a window. It looks big enough for you to go through, but looks too easy - maybe it's a trap, or it has an alarm of some sort. If you prefer, you can deceive Lily and sneak through the front door, although she may not like you any better when she realizes what you just did. And, of course, you could intimidate her enough for her to let you go, as impossible as it sounds.
+*fake_choice
+	#Go through the window.
+		You take a look and unlock the window, pushing yourself up. It's not high enough for you to feel any difficulties climbing, and in no time your hanging on the other side. You analyze the situation and confirm it's safe to jump. The first thing you notice is an old man whipping himself, back bleeding. As soon as your feet touch the ground he turns to you with a toothless grin. "Oh, hi there!" The stranger chuckles: "Need a guide, ${boy scout}?"
+		
+	#Deceive Lily. 
+		*elseif charm >69
+			You tell a bold lie about needing to speak with Satan. When she turns around to guide you toward his office you run in the other direction, as fast as you can. You find a door that leads outside, but as soon as you set foot there, a crazy-looking old man turns to you with a toothless grin. "Oh, hi there!" The stranger chuckles: "Need a guide, ${boy scout}?"
+			*set lily -10
+			*set renown +1
+		*elseif agility >69
+			You manage to sneak out without being seen, in a moment when Lily is distracted looking at the other side. You find a door that leads outside, but as soon as you set foot there, a crazy-looking old man turns to you with a toothless grin. "Oh, hi there!" The stranger chuckles: "Need a guide, ${boy scout}?"
+			*set lily -10
+			*set renown +1
+		*else
+			You try to sneak out, but you're too slow and loud. Lily catches you and throws you back in your room without saying anything.
+			You end up sneaking out through the window. You take a look and unlock it, pushing yourself up. It's not high enough for you to feel any difficulties climbing, and in no time your hanging on the other side. You analyze the situation and confirm it's safe to jump. The first thing you notice is an old man whipping himself, back bleeding. As soon as your feet touch the ground he turns to you with a toothless grin. "Oh, hi there!" The stranger chuckles: "Need a guide, ${boy scout}?"
+				*set lily -10
+				*set renown -1
+	
+	#Intimidate Lily.
+		You go over to her and attempts to force her against the wall. 
+			*if strength >69
+				It's surprisingly easy, so you press your fingers around her neck and say "Listen: I'm about to go out and you're about to pretend you saw nothing. If you try to stop me, I'll crush you." You press her throat a little tighter. "Yes, ${sir}" she gasps. "Good." You muse. You find a door that leads outside, but as soon as you set foot there, a crazy-looking old man turns to you with a toothless grin. "Oh, hi there!" The stranger chuckles: "Need a guide, ${boy scout}?" 
+				*set lily +10
+				*set heaven -5
+				*set renown +1
+				
+			*else
+				It's more difficult than you imagine, as she grabs your throat with inhuman strength and pins you to the wall. "Never try that again, or you'd wish there was no afterlife." You nod, scared and mortified. You end up sneaking out through the window. You take a look and unlock it, pushing yourself up. It's not high enough for you to feel any difficulties climbing, and in no time your hanging on the other side. You analyze the situation and confirm it's safe to jump. The first thing you notice is an old man whipping himself, back bleeding. As soon as your feet touch the ground he turns to you with a toothless grin. "Oh, hi there!" The stranger chuckles: "Need a guide, ${boy scout}?"
+				*set lily -10
+				*set renown -1
+Before you can answer, the man puts his whip on the ground and tips his "hat" at you. He's wearing a bowl on his head. "Ya' can call me Root Beer. I know this place very, very well and can lead you to anywhere around here." 
+*fake_choice
+*hide_reuse
+*label starty
+	#What's your price?
+		"What do 'ya mean, price? There's no currency in Hell!" You frown "So what are you gaining from being my guide?" After a fit of laughter the old man answers: "I'm stuck here for eternity, ${boy scout}. Being a tour guide is kinda hobby fo' me." Right. Not suspicious at all. 
+		*goto starty
+	#What are you doing here?
+		"Whipping mah'self. 'Course." He says simply. You stare, unable to respond. The old man's eyes brighten up: "Oh! You mean what I'm doing in Hell!" Not exactly. You're just trying to figure out why he's not in one of the rooms in that corridor you saw earlier. "I'm punishing myself." His voice is somber enough for you to believe that specific sentence. "The Devil said I hate me so much that I should be the one to punish me, so here I am." You don't know what to think about this. 
+		*goto starty
+	#Who are you, really?
+		"I told 'ya, silly! I'm Root Beer" he smiles sweetly at you. 
+		*goto starty
+	#Okay, you can be my guide.
+		So you're going to risk it. I just hope he's worth something. He gladly wraps his arm around yours and asks where you want to go.
+		*set rootbeer +10
+		*temp var rootdrunk
+		*goto exploring
+	#I'm good, thanks.
+		For a second there I thought you'd be stupid enough to accept his help. Thank goodness. Wait... He's coming anyway! What a stubborn old fool!
+		"I told you no, Root Beer." You say, losing your patience. "You look as green as a new leaf, ${boy scout}. You'll end up dead if you keep exploring on your own... please let me go with you!" You deny again and he insists. To cut the discussion short you give up and let him follow you around.
+		*set rootbeer -10
+		*temp var rootdrunk
+		*goto exploring
+
+
+
+
+
+
+
+	
+	
+      
+*label exploring
+
